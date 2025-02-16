@@ -69,7 +69,7 @@ class Database extends Config
         }
 
         $this->default = ($_SERVER['SERVER_NAME'] == 'deleonconstruccion.lamat.pro' || $_SERVER['SERVER_NAME'] == 'deleon')
-        ? $default = [
+        ?[
             'DSN'      => '',
             'hostname' => 'localhost',
             'username' => 'root',
@@ -91,7 +91,7 @@ class Database extends Config
             'port'     => 3306,
             'saveQueries' => true,
         ]
-        : $default = [
+        :[
             'DSN'      => '',
             'hostname' => 'localhost',
             'username' => 'admin_deleon',
