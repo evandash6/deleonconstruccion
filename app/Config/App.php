@@ -6,6 +6,12 @@ use CodeIgniter\Config\BaseConfig;
 
 class App extends BaseConfig
 {
+
+    public function __construct() {
+        $this->baseURL = ($_SERVER['SERVER_NAME'] == 'deleonconstruccion.lamat.pro' || $_SERVER['SERVER_NAME'] == 'deleon')
+            ? BASE . '/public'
+            : 'http://10.57.0.40/deleonconstruccion/public/';
+    }
     /**
      * --------------------------------------------------------------------------
      * Base Site URL
@@ -16,16 +22,8 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    public $baseURL = BASE.'/public';
-
-    public function index(){
-        if(1==1){
-            
-        }
-        else{
-           $this->baseURL = 'http://10.57.0.40/deleonconstruccion/public/';
-        }
-     }
+    
+    // public $baseURL = BASE.'/public';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
