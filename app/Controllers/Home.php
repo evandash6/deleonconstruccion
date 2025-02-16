@@ -8,13 +8,8 @@ use App\Models\directorioModel;
 
 class Home extends BaseController
 {
-
-
-    public function index(){
-        var_Dump($_SERVER['SERVER_NAME']);
-    }
     //Principal de la pagina.
-    public function index2()
+    public function index()
     {
 
        // Cargar la base de datos

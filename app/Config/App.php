@@ -7,6 +7,8 @@ use CodeIgniter\Config\BaseConfig;
 class App extends BaseConfig
 {
 
+    public $baseURL;
+
     public function __construct() {
         $this->baseURL = ($_SERVER['SERVER_NAME'] == 'deleonconstruccion.lamat.pro' || $_SERVER['SERVER_NAME'] == 'deleon')
             ? BASE . '/public'
