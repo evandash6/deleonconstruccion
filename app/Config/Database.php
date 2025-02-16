@@ -50,8 +50,8 @@ class Database extends Config
     public array $default = [
         'DSN'      => '',
         'hostname' => 'localhost',
-        'username' => 'root',
-        'password' => '2424123abc',
+        'username' => 'admin_deleon',
+        'password' => 'W2ym02u~6',
         'database' => 'deleonconstruccion',
         'DBDriver' => 'MySQLi', // o 'PDO' si prefieres usar PDO
         'DBPrefix' => '',
