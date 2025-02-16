@@ -9,6 +9,8 @@ use CodeIgniter\Database\Config;
  */
 class Database extends Config
 {
+
+    public array $default;
     /**
      * The directory that holds the Migrations
      * and Seeds directories.
@@ -26,49 +28,6 @@ class Database extends Config
      *
      * @var array<string, mixed>
      */
-    /*public array $default = [
-        'DSN'          => '',
-        'hostname'     => '127.0.0.1',
-        'username'     => 'root',
-        'password'     => '',
-        'database'     => 'deleonconstruccion',
-        'DBDriver'     => 'MySQLi',
-        'DBPrefix'     => '',
-        'pConnect'     => false,
-        'DBDebug'      => true,
-        'charset'      => 'utf8',
-        'DBCollat'     => 'utf8_general_ci',
-        'swapPre'      => '',
-        'encrypt'      => false,
-        'compress'     => false,
-        'strictOn'     => false,
-        'failover'     => [],
-        'port'         => 3306,
-        'numberNative' => false,
-    ];*/
-
-    public array $default = [
-        'DSN'      => '',
-        'hostname' => 'localhost',
-        'username' => 'admin_deleon',
-        'password' => 'W2ym02u~6',
-        'database' => 'deleonconstruccion',
-        'DBDriver' => 'MySQLi', // o 'PDO' si prefieres usar PDO
-        'DBPrefix' => '',
-        'pConnect' => false,
-        'DBDebug'  => (ENVIRONMENT !== 'production'),
-        'cacheOn'  => false,
-        'cachedir' => '',
-        'charSet'  => 'utf8',
-        'DBCollat' => 'utf8_general_ci',
-        'swap_pre' => '',
-        'encrypt'  => false,
-        'compress' => false,
-        'strictOn' => false,
-        'failover' => [],
-        'port'     => 3306,
-        'saveQueries' => true,
-    ];
 
     /**
      * This database connection is used when
@@ -108,5 +67,51 @@ class Database extends Config
         if (ENVIRONMENT === 'testing') {
             $this->defaultGroup = 'tests';
         }
+
+        $this->default = ($_SERVER['SERVER_NAME'] == 'deleonconstruccion.lamat.pro' || $_SERVER['SERVER_NAME'] == 'deleon')
+        ? $default = [
+            'DSN'      => '',
+            'hostname' => 'localhost',
+            'username' => 'root',
+            'password' => '2424123abc',
+            'database' => 'deleonconstruccion',
+            'DBDriver' => 'MySQLi', // o 'PDO' si prefieres usar PDO
+            'DBPrefix' => '',
+            'pConnect' => false,
+            'DBDebug'  => (ENVIRONMENT !== 'production'),
+            'cacheOn'  => false,
+            'cachedir' => '',
+            'charSet'  => 'utf8',
+            'DBCollat' => 'utf8_general_ci',
+            'swap_pre' => '',
+            'encrypt'  => false,
+            'compress' => false,
+            'strictOn' => false,
+            'failover' => [],
+            'port'     => 3306,
+            'saveQueries' => true,
+        ]
+        : $default = [
+            'DSN'      => '',
+            'hostname' => 'localhost',
+            'username' => 'admin_deleon',
+            'password' => 'W2ym02u~6',
+            'database' => 'deleonconstruccion',
+            'DBDriver' => 'MySQLi', // o 'PDO' si prefieres usar PDO
+            'DBPrefix' => '',
+            'pConnect' => false,
+            'DBDebug'  => (ENVIRONMENT !== 'production'),
+            'cacheOn'  => false,
+            'cachedir' => '',
+            'charSet'  => 'utf8',
+            'DBCollat' => 'utf8_general_ci',
+            'swap_pre' => '',
+            'encrypt'  => false,
+            'compress' => false,
+            'strictOn' => false,
+            'failover' => [],
+            'port'     => 3306,
+            'saveQueries' => true,
+        ];
     }
 }
