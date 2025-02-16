@@ -1,0 +1,43 @@
+# Ignorar el directorio de dependencias de Composer
+/vendor/
+
+# Ignorar el archivo de entorno (puede contener información sensible)
+.env
+
+# Ignorar el directorio de caché de CodeIgniter
+/writable/cache/
+/writable/logs/
+/writable/session/
+/writable/uploads/
+
+# Ignorar el directorio de pruebas
+/tests/_support/_generated/
+
+# Ignorar archivos de configuración local
+/app/Config/Development/
+/app/Config/Production/
+
+# Ignorar archivos de IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignorar archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de Composer
+composer.lock
+composer.phar
+
+# Ignorar archivos de npm (si usas Node.js)
+node_modules/
+npm-debug.log
+
+# Ignorar archivos de logs personalizados (si los tienes)
+/logs/
+
+# Ignorar archivos de backup
+*.bak
+*.tmp
