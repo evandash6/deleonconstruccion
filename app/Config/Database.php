@@ -68,34 +68,27 @@ class Database extends Config
             $this->defaultGroup = 'tests';
         }
 
-        $this->default = ($_SERVER['SERVER_NAME'] == 'deleonconstruccion.lamat.pro' || $_SERVER['SERVER_NAME'] == 'deleon')
-        ?[
+        switch ($_SERVER['SERVER_NAME']) {
+            case 'deleonconstruccion.lamat.pro':
+                $user = 'admin_deleon';
+                $pass = 'W2ym02u~6';
+            break;
+            case 'deleon':
+                $user = 'root';
+                $pass = '2424123abc';
+            break;
+            default:
+                $user = 'root';
+                $pass = '';
+            break;
+        }
+
+
+        $this->default = [
             'DSN'      => '',
             'hostname' => 'localhost',
-            'username' => 'root',
-            'password' => '2424123abc',
-            'database' => 'deleonconstruccion',
-            'DBDriver' => 'MySQLi', // o 'PDO' si prefieres usar PDO
-            'DBPrefix' => '',
-            'pConnect' => false,
-            'DBDebug'  => (ENVIRONMENT !== 'production'),
-            'cacheOn'  => false,
-            'cachedir' => '',
-            'charSet'  => 'utf8',
-            'DBCollat' => 'utf8_general_ci',
-            'swap_pre' => '',
-            'encrypt'  => false,
-            'compress' => false,
-            'strictOn' => false,
-            'failover' => [],
-            'port'     => 3306,
-            'saveQueries' => true,
-        ]
-        :[
-            'DSN'      => '',
-            'hostname' => 'localhost',
-            'username' => 'admin_deleon',
-            'password' => 'W2ym02u~6',
+            'username' => $user,
+            'password' => $pass,
             'database' => 'deleonconstruccion',
             'DBDriver' => 'MySQLi', // o 'PDO' si prefieres usar PDO
             'DBPrefix' => '',
