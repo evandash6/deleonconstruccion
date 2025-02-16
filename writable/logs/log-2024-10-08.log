@@ -1,0 +1,142 @@
+ERROR - 2024-10-08 17:28:21 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo failed: Host desconocido.  in C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php:1902
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\xampp\\htdocs...', 1902)
+#1 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1902): fsockopen('tls://ssl:smtp....', 465, NULL, NULL, 7)
+#2 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1810): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1695): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1587): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\deleonconstruccion\app\Controllers\Email.php(30): CodeIgniter\Email\Email->send()
+#6 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Email->index()
+#7 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Email))
+#8 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\deleonconstruccion\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-10-08 17:28:21 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-10-08 17:28:21 --> 
+ERROR - 2024-10-08 17:29:26 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo failed: Host desconocido.  in C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php:1902
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\xampp\\htdocs...', 1902)
+#1 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1902): fsockopen('tls://ssl:smtp....', 465, NULL, NULL, 7)
+#2 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1810): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1695): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1587): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\deleonconstruccion\app\Controllers\Email.php(30): CodeIgniter\Email\Email->send()
+#6 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Email->index()
+#7 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Email))
+#8 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\deleonconstruccion\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-10-08 17:29:26 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-10-08 17:29:26 --> 
+ERROR - 2024-10-08 17:29:28 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo failed: Host desconocido.  in C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php:1902
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\xampp\\htdocs...', 1902)
+#1 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1902): fsockopen('tls://ssl:smtp....', 465, NULL, NULL, 7)
+#2 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1810): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1695): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1587): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\deleonconstruccion\app\Controllers\Email.php(32): CodeIgniter\Email\Email->send()
+#6 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Email->index()
+#7 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Email))
+#8 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\deleonconstruccion\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-10-08 17:29:28 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-10-08 17:29:28 --> Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-10-08 17:36:04 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo failed: Host desconocido.  in C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php:1902
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\xampp\\htdocs...', 1902)
+#1 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1902): fsockopen('ssl://ssl:smtp....', 465, NULL, NULL, 7)
+#2 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1810): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1695): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1587): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\deleonconstruccion\app\Controllers\Email.php(30): CodeIgniter\Email\Email->send()
+#6 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Email->index()
+#7 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Email))
+#8 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\deleonconstruccion\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-10-08 17:36:04 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-10-08 17:36:04 --> 
+ERROR - 2024-10-08 17:36:06 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo failed: Host desconocido.  in C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php:1902
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\xampp\\htdocs...', 1902)
+#1 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1902): fsockopen('ssl://ssl:smtp....', 465, NULL, NULL, 7)
+#2 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1810): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1695): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1587): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\deleonconstruccion\app\Controllers\Email.php(32): CodeIgniter\Email\Email->send()
+#6 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Email->index()
+#7 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Email))
+#8 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\deleonconstruccion\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-10-08 17:36:06 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-10-08 17:36:06 --> Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-10-08 22:16:40 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): SSL: La operación se completó correctamente in C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php:1902
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): SS...', 'C:\\xampp\\htdocs...', 1902)
+#1 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1902): fsockopen('ssl://10.254.25...', 2525, NULL, NULL, 7)
+#2 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1810): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1695): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1587): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\deleonconstruccion\app\Controllers\Email.php(30): CodeIgniter\Email\Email->send()
+#6 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Email->index()
+#7 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Email))
+#8 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\deleonconstruccion\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-10-08 22:16:40 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-10-08 22:16:40 --> 
+ERROR - 2024-10-08 22:16:40 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): SSL: La operación se completó correctamente in C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php:1902
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): SS...', 'C:\\xampp\\htdocs...', 1902)
+#1 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1902): fsockopen('ssl://10.254.25...', 2525, NULL, NULL, 7)
+#2 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1810): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1695): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1587): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\deleonconstruccion\app\Controllers\Email.php(32): CodeIgniter\Email\Email->send()
+#6 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Email->index()
+#7 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Email))
+#8 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\deleonconstruccion\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-10-08 22:16:40 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-10-08 22:16:40 --> Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-10-08 22:16:47 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): SSL: La operación se completó correctamente in C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php:1902
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): SS...', 'C:\\xampp\\htdocs...', 1902)
+#1 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1902): fsockopen('ssl://10.254.25...', 2525, NULL, NULL, 7)
+#2 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1810): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1695): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1587): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\deleonconstruccion\app\Controllers\Email.php(30): CodeIgniter\Email\Email->send()
+#6 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Email->index()
+#7 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Email))
+#8 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\deleonconstruccion\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-10-08 22:16:47 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-10-08 22:16:47 --> 
+ERROR - 2024-10-08 22:16:47 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): SSL: La operación se completó correctamente in C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php:1902
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): SS...', 'C:\\xampp\\htdocs...', 1902)
+#1 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1902): fsockopen('ssl://10.254.25...', 2525, NULL, NULL, 7)
+#2 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1810): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1695): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\Email\Email.php(1587): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\deleonconstruccion\app\Controllers\Email.php(32): CodeIgniter\Email\Email->send()
+#6 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(943): App\Controllers\Email->index()
+#7 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Email))
+#8 C:\xampp\htdocs\deleonconstruccion\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\deleonconstruccion\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2024-10-08 22:16:47 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2024-10-08 22:16:47 --> Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+CRITICAL - 2024-10-08 23:06:58 --> ErrorException: Undefined property: App\Controllers\Email::$load
+in APPPATH\Controllers\Email.php on line 19.
+ 1 APPPATH\Controllers\Email.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Email::$load', 'C:\\xampp\\htdocs\\deleonconstruccion\\app\\Controllers\\Email.php', 19)
+ 2 SYSTEMPATH\CodeIgniter.php(943): App\Controllers\Email->index()
+ 3 SYSTEMPATH\CodeIgniter.php(503): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Email))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
