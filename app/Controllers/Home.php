@@ -2,15 +2,19 @@
 
 namespace App\Controllers;
 use CodeIgniter\Controller;
-use Config\Database;
+// use Config\Database;
 use App\Models\directorioModel;
 
 
 class Home extends BaseController
 {
 
+
+    public function index(){
+        var_Dump($_SERVER);
+    }
     //Principal de la pagina.
-    public function index()
+    public function index2()
     {
 
        // Cargar la base de datos

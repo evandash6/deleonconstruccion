@@ -16,7 +16,16 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    public string $baseURL = 'http://10.57.0.40/deleonconstruccion/public/';
+    public $baseURL = BASE.'/public';
+
+    public function index(){
+        if(1==1){
+            
+        }
+        else{
+           $this->baseURL = 'http://10.57.0.40/deleonconstruccion/public/';
+        }
+     }
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.

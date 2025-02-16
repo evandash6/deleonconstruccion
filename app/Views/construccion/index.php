@@ -1,6 +1,6 @@
 <?php
 
-//var_dump($consulta);
+var_dump($_SERVER);
 ?>
 <!DOCTYPE html>
 <html lang="en">
