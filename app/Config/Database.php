@@ -52,7 +52,7 @@ class Database extends Config
         'compress'    => false,
         'strictOn'    => false,
         'failover'    => [],
-        'port'        => 3306,
+        'port'        => 3307,
         'foreignKeys' => true,
         'busyTimeout' => 1000,
     ];
@@ -103,7 +103,7 @@ class Database extends Config
             'compress' => false,
             'strictOn' => false,
             'failover' => [],
-            'port'     => 3306,
+            'port'     => 3307,
             'saveQueries' => true,
         ];
     }
