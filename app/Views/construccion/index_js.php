@@ -4,11 +4,14 @@ $(document).ready(function() {
     //Iniciamos ocultando la tabla que muestra la consulta de los oficios.
     $("#div_oficios").hide();
 
+    
     function table(){
         $('#dt-oficios').DataTable({
         responsive: true,
         ordering: false,
-        searching: false,
+        //scrollY: "200px",  // Altura del scroll vertical
+        scrollX: true,
+        //searching: false,
         lengthChange: false,
         //Colocamos la tabla en español
         language: {
@@ -16,6 +19,9 @@ $(document).ready(function() {
         }
     });
     }
+
+        //Iniciamos el directorio
+        iniciaDirectorio();
 
     
 
@@ -358,8 +364,43 @@ $(document).ready(function() {
 
     });
 
-     
+  //Iniciamos la tabla
+function iniciaDirectorio(){
+
+//Realizamos la busqueda mediante ajax
+            //Enviamos los datos a la funsión que ayudara ha guardar.
+            var formData = new FormData(document.getElementById("formbuscar"));
+
+                
+            //console.log(formData)
+            $.ajax({
+            url: '<?=base_url()?>home/buscarDirectorio', // Cambia esto por la URL de tu servidor
+            method: 'POST',
+            data: formData, 
+            contentType: false, //importante enviar este parametro en false
+            processData: false, //importante enviar este parametro en false
+            success: function(data) {
+
+                let res = JSON.parse(data);
+
+               
+
+                //Habilita la tabla
+                $("#div_oficios").show();
+                
+                //Colocamos la tabla creada en el div
+                //console.log(res.table);
+                $('#div_oficios').html(res.table)
+                table();
+                
+            },
+            error: function() {
+                alert('Error al buscar');
+            }
+            });  
+}   
 });
+
 
 /**
  * Detalle con la información de los servicios seleccionados

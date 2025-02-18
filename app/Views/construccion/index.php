@@ -18,6 +18,38 @@
 	<!--<link rel="stylesheet" href="<?=base_url()?>frontend/css/all.min.css">-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
 	<title>De León | Construcción</title>
+
+	<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Centrar si hay menos elementos */
+            gap: 10px; /* Espacio entre elementos */
+            padding: 20px;
+        }
+
+        .caja {
+            background-color: #373a3c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            flex: 1 1 250px; /* Mínimo 250px, flexible */
+            max-width: 300px; /* No más de 300px */
+            border-radius: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .caja {
+                flex-basis: 100%; /* En pantallas pequeñas, ocupan todo el ancho */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -248,25 +280,31 @@ Modal de directorio de registro
 		<div class="header-mobile-wrap">
 			<nav class="header-mobile-nav">
 				<ul>
+					<!--<li><a class="anchor-link" href="#s-about">Nosotros</a></li>
+					<li><a class="anchor-link" href="#s-services">Servicios</a></li>
+					<li><a class="anchor-link" href="#s-gallery">Galería</a></li>
+					<li><a class="anchor-link" href="#s-team">Our team</a></li>
+					<li><a class="anchor-link" href="#s-testimonials">Testimonials</a></li>
+					<li><a class="anchor-link" href="#s-contact">Contacto</a></li>-->
 					<li><a class="anchor-link" href="#s-about">Nosotros</a></li>
 					<li><a class="anchor-link" href="#s-services">Servicios</a></li>
 					<li><a class="anchor-link" href="#s-gallery">Galería</a></li>
-					<!--<li><a class="anchor-link" href="#s-team">Our team</a></li>
-					<li><a class="anchor-link" href="#s-testimonials">Testimonials</a></li>-->
+					<li><a class="anchor-link" href="#s-team">Directorio</a></li>
+					<li><a class="anchor-link" href="#s-busqueda">Busqueda</a></li>
 					<li><a class="anchor-link" href="#s-contact">Contacto</a></li>
 				</ul>
 			</nav>
 
-			<div class="header-mobile-info">
+			<!--<div class="header-mobile-info">
 				<img src="<?=base_url()?>frontend/images/location.svg" alt="ул. Гагарина 5Б г. Сочи">
 				<span>Greenbe street 5B, Latvia</span>
-			</div>
-			<a href="tel:79504575654" class="header-mobile-info">
-				<img src="<?=base_url()?>frontend/images/phone.svg" alt="+7 950 457 5654">
-				<span>+7 950 457 5654</span>
+			</div>-->
+			<a href="tel:3330252158" class="header-mobile-info">
+				<img src="<?=base_url()?>frontend/images/phone.svg" alt="33 3025 2158">
+				<span>33 3025 2158</span>
 			</a>
 
-			<div class="header-mobile-social">
+			<!--<div class="header-mobile-social">
 				<a href="#">
 					<img src="<?=base_url()?>frontend/images/social-twitter.svg" alt="Twitter">
 				</a>
@@ -279,7 +317,7 @@ Modal de directorio de registro
 				<a href="#">
 					<img src="<?=base_url()?>frontend/images/social-telegram.svg" alt="Telegram">
 				</a>
-			</div>
+			</div>-->
 		</div>
 		<!-- Header mobile END -->
 
@@ -393,6 +431,8 @@ Modal de directorio de registro
 		</div>
 	</section>-->
 
+	
+
 	<section class="s-services" id="s-services">
 		<div class="container">
 			<h2 class="center-title wow fadeIn" data-wow-delay="0.1s">Nuestros servicios</h2>
@@ -438,8 +478,40 @@ Modal de directorio de registro
 						<a href="#modal-form3" data-effect="mfp-zoom-in" class="def-btn services-btn">Servicio de pedidos</a>
 					</div>
 				</div>
+			</div><br>
+			
+			<div class="services-row">
+
+				<div class="services-item wow fadeIn" data-wow-delay="0.1s">
+					<div class="services-thumb">
+						<!--<img src="<?=base_url()?>frontend/images/service-1.jpg" alt="Construction of houses">-->
+						<img src="<?=base_url()?>frontend/images/galeria/panel-solar/img1.jpg" alt="Construction of houses">
+					</div>
+					<div class="services-body">
+						<h4 class="services-title">Instalación de panel solar</h4>
+						<div class="services-desc">
+						Utilice la energía solar como la nueva alternativa de consumo para su hogar o negocio, cuidando siempre con responsabilidad el medio ambiente, ante el impacto generado por la energía no renovable. 
+						</div>
+						<a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn">Servicio de pedidos</a>
+					</div>
+				</div>
+
+				<div class="services-item wow fadeIn" data-wow-delay="0.2s">
+					<div class="services-thumb">
+						<!--<img src="<?=base_url()?>frontend/images/service-1.jpg" alt="Construction of houses">-->
+						<img src="<?=base_url()?>frontend/images/galeria/panel-solar/img3.jpg" alt="Construction of houses">
+					</div>
+					<div class="services-body">
+						<h4 class="services-title">Instalación de calentador solar</h4>
+						<div class="services-desc">
+						DE LEON-CONSTRUCCIÓN ofrece la instalación de calentadores solares, este sistema mantendra el agua caliente solamente con la energía solar, sin la necesidad de gas o lectricidad. 
+						</div>
+						<a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn">Servicio de pedidos</a>
+					</div>
+				</div>
 
 			</div>
+				
 		</div>
 	</section>
 
@@ -536,6 +608,19 @@ Modal de directorio de registro
 				<a href="<?=base_url()?>frontend/images/galeria/general/img36.jpg" class="gallery-item" data-effect="mfp-zoom-in">
 					<span class="gallery-border"></span>
 					<img src="<?=base_url()?>frontend/images/galeria/general/img36.jpg" alt="Image 12">
+				</a>
+
+				<a href="<?=base_url()?>frontend/images/galeria/panel-solar/img4.jpeg" class="gallery-item" data-effect="mfp-zoom-in">
+					<span class="gallery-border"></span>
+					<img src="<?=base_url()?>frontend/images/galeria/panel-solar/img4.jpeg" alt="Image 10">
+				</a>
+				<a href="<?=base_url()?>frontend/images/galeria/panel-solar/img5.jpeg" class="gallery-item" data-effect="mfp-zoom-in">
+					<span class="gallery-border"></span>
+					<img src="<?=base_url()?>frontend/images/galeria/panel-solar/img5.jpeg" alt="Image 11">
+				</a>
+				<a href="<?=base_url()?>frontend/images/galeria/panel-solar/img6.jpeg" class="gallery-item" data-effect="mfp-zoom-in">
+					<span class="gallery-border"></span>
+					<img src="<?=base_url()?>frontend/images/galeria/panel-solar/img6.jpeg" alt="Image 12">
 				</a>
 			</div>
 
@@ -765,57 +850,40 @@ Modal de directorio de registro
 			<div class="def-desc wow fadeInLeft" data-wow-delay="0.3s">
 			DE LEÓN-CONSTRUCCIÓN cuenta con un motor de búsqueda para consultar la información de personas dedicadas a los oficios referentes a la construcción y poder dar solución a los pequeños y grandes proyectos. Puedes buscar y solicitar los servicios de un fontanero, albañil, herrero, etc., que se encuentran cerca de tu domicilio.	
 			</div><br>
-
-			<div class="team-row">
-
 			<form id="formbuscar" name="formbuscar">
-				<table style="width: 100%; overflow-x: auto;" border="0">
-				<thead>
-					<tr>
-						<th style="width: 20%;">Estado</th>
-						<th style="width: 20%;">Municipio</th>
-						<th style="width: 20%;">Oficio</th>
-						<th style="width: 20%;"></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							<select style="width: 315px;" name="b_cve_ent" id="b_id_estado" required>
-								<option value="">Estado..</option>
-								<?php 
+				<div class="contenedor">
+					<div class="caja">
+						<select style="width: 200px;" name="b_cve_ent" id="b_id_estado" required>
+							<option value="">Estado..</option>
+							<?php 
 								foreach($tb_estado as $estado){
-								?>
+							?>
 									<option value="<?=$estado->cve_ent?>"><?=$estado->nom_ent?></option>
-								<?php
+							<?php
 								}
-								?>	
-							</select>
-						</td>
-						<td>
-							<select style="width: 315px;" name="b_id_municipio" id='b_c_municipio' required>
-								<option value="">Municipio..</option>
-							</select>
-						</td>
-						<td>
-							<select style="width: 315px;" name="b_id_oficio" id='b_c_oficio' >
-								<option value="">Todos los oficios..</option>
-								<?php 
-								foreach($c_oficio as $oficio){
-								?>
-									<option value="<?=$oficio->id?>"><?=$oficio->oficio?></option>
-								<?php
-								}
-								?>	
-							</select>
-						</td>
-						<td>
-						<button id="buscar_directorio" class="def-btn form-button" title="Buscar"><i class="fa fa-search"></i></button>
-						</td>
-					</tr>
-					</tbody>
-				</table>
-			</form><br>
+							?>	
+						</select>
+					</div>
+					<div class="caja">
+						<select style="width: 200px;" name="b_id_municipio" id='b_c_municipio' required>
+							<option value="">Municipio..</option>
+						</select></div>
+					<div class="caja">
+						<select style="width: 200px;" name="b_id_oficio" id='b_c_oficio' >
+							<option value="">Todos los oficios..</option>
+							<?php 
+							foreach($c_oficio as $oficio){
+							?>
+								<option value="<?=$oficio->id?>"><?=$oficio->oficio?></option>
+							<?php
+							}
+							?>	
+						</select>
+					</div>
+					<div class="caja"><button id="buscar_directorio" class="def-btn form-button" title="Buscar"><i class="fa fa-search"></i></button></div>
+				</div>
+			</form>	
+			<div class="team-row">
 		</div><br>
 
 		<div class="container">
@@ -950,7 +1018,7 @@ Modal de directorio de registro
 							<div class="footer-info-icon"><img src="<?=base_url()?>frontend/images/location-gray.svg" alt="Location"></div>
 							<div class="footer-info-text">Greenbe street 5B, Latvia</div>
 						</div>-->
-						<a href="tel:79504575654" class="footer-info-item">
+						<a href="tel:3330252158" class="footer-info-item">
 							<div class="footer-info-icon"><img src="<?=base_url()?>frontend/images/phone-gray.svg" alt="Phone"></div>
 							<div class="footer-info-text">+52 33 3025 2158</div>
 						</a>

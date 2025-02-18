@@ -173,15 +173,29 @@ class Home extends BaseController
             $municipio = $this->request->getPost('b_id_municipio');
             $oficio = $this->request->getPost('b_id_oficio');
 
-            $comodin ="";
+            $comodin_oficio ="";
+            $comodin_estado = "";
+            $comodin_municipio = "";
+            
             if($oficio==""){
-
-                $comodin="";
-
+                $comodin_oficio="";
             }else{
-                $comodin = "AND o.id =".$oficio; 
-
+                $comodin_oficio = " AND o.id =".$oficio." "; 
             }
+
+            if($estado==""){
+                $comodin_estado = "";
+            }else{
+                $comodin_estado= " AND e.cve_ent = '".$estado."' ";
+            }
+
+            if($municipio==""){
+                $comodin_municipio="";
+            }else{
+                $comodin_municipio= " AND m.id =  ".$municipio." ";
+            }
+
+
 
             //Realizamos el query
             $query = "SELECT
@@ -200,11 +214,10 @@ class Home extends BaseController
                         INNER JOIN c_municipio m ON m.id = d.id_municipio
                         INNER JOIN c_oficio o ON o.id = d.id_oficio 
                     WHERE
-                        e.cve_ent = '".$estado."' 
-                        AND m.id =  ".$municipio."
+                    d.id=d.id".$comodin_estado." ".$comodin_municipio." ".$comodin_oficio." AND d.activo = 1 ORDER BY e.nom_ent DESC, d.nombre_empresa ASC ";
                         
-                        AND d.activo = 1 ".$comodin." ORDER BY d.nombre_empresa ASC";
-
+                        //d.id=d.id ".$comodin_estado." AND d.activo = 1 ".$comodin_oficio." ORDER BY d.nombre_empresa ASC";
+//.$comodin_municipio
             //Conectamos a la base de datos
             $db = \Config\Database::connect();
 
