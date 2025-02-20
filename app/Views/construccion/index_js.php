@@ -4,14 +4,12 @@ $(document).ready(function() {
     //Iniciamos ocultando la tabla que muestra la consulta de los oficios.
     $("#div_oficios").hide();
 
-
-
     function table() {
         $('#dt-oficios').DataTable({
             responsive: true,
             ordering: false,
-            scrollY: "200px", // Altura del scroll vertical
-            scrollX: true,
+            //scrollY: "200px", // Altura del scroll vertical
+            //scrollX: true,
             //searching: false,
             lengthChange: false,
             //Colocamos la tabla en español
@@ -353,8 +351,6 @@ $(document).ready(function() {
 
                     let res = JSON.parse(data);
 
-
-
                     //Habilita la tabla
                     $("#div_oficios").show();
 
@@ -413,7 +409,30 @@ $(document).ready(function() {
 /**
  * Detalle con la información de los servicios seleccionados
  */
-function showModal($datos) {
+function showModal(datos) {
+
+    //console.log(datos)
+
+    if ($('#exampleModal').length) {
+
+        //Abrimos el modal
+        $('#exampleModal').modal('show');
+        //Pasamos los datos para mostrar la información dentro del modal
+        $('#estado').html($datos.nom_ent);
+        $('#municipio').html($datos.nom_mun);
+        $('#oficio').html($datos.oficio);
+        $('#empresa').html($datos.nombre_empresa);
+        $('#responsable').html($datos.nombre);
+        $('#telefono').html($datos.telefono);
+        $('#correo').html($datos.correo);
+        $('#direccion').html($datos.direccion);
+        $('#descripcion').html($datos.descripcion_empresa);
+
+    }else{
+
+            alert('Error!! No se puede abrir el Modal o no se encuentra, intente más tarde');
+        }
+/*
     document.getElementById("miModal").style.display = "block";
 
     document.getElementById("btnCerrarModal").addEventListener("click", function() {
@@ -428,7 +447,7 @@ function showModal($datos) {
     $('#telefono').html($datos.telefono);
     $('#correo').html($datos.correo);
     $('#direccion').html($datos.direccion);
-    $('#descripcion').html($datos.descripcion_empresa);
+    $('#descripcion').html($datos.descripcion_empresa);*/
 
 }
 

@@ -7,6 +7,12 @@
 
     <link rel="icon" href="<?= base_url() ?>frontend/images/favicon.png">
 
+    	<!-- CSS de Bootstrap 5 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+	
+    <!-- JS de Bootstrap 5 --> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- DataTables JS -->
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
@@ -72,6 +78,41 @@
 </head>
 
 <body>
+   
+<!-- Modal para los dedatlles del oficio-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-form-logo">
+                <!--<img src="<?= base_url() ?>frontend/images/logo-header.svg" alt="Construction">-->
+                <img src="<?= base_url() ?>frontend/images/deleon-construccion.png" alt="Construction">
+            </div>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+		  <div class="modal-form-title">Detale del directorio</div>
+            <!--Crear aqui los div responsives para la salida de la información-->
+			        <div><strong>Estado: </strong><label id="estado"></label></div>
+                    <div><strong>Municipio: </strong><label id="municipio"></label></div>
+                    <div><strong>Oficio: </strong><label id="oficio"></label></div>
+                    <div><strong>Empresa: </strong><label id="empresa"></label></div>
+                    <div><strong>Responsable: </strong><label id="responsable"></label></div>
+                    <div><strong>Teléfono: </strong><label id="telefono"></label></div>
+                    <div><strong>Correo: </strong><label id="correo"></label></div>
+                    <div><strong>Dirección: </strong><label id="direccion"></label></div>
+                    <div><strong>Descripción de la empresa: </strong><label id="descripcion"></label></div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <!--<button type="button" class="btn btn-primary">Guardar</button>-->
+          </div>
+        </div>
+      </div>
+</div>
+
+
     <!--/**
 Modal de directorio de registro
 */
@@ -217,13 +258,8 @@ Modal de directorio de registro
 
     </div>
 
-
-
     <!--Modal, para los detalles del datatable.js-->
-
-    
-
-    <div id="miModal" class="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!--<div id="miModal" class="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-contenido">
@@ -256,11 +292,7 @@ Modal de directorio de registro
 
             </div>
         </div>
-    </div>
-
-
-
-
+    </div>-->
 
     <div class="go-up">
         <a href="#">
@@ -521,7 +553,7 @@ Modal de directorio de registro
                 <div class="services-item wow fadeIn" data-wow-delay="0.1s">
                     <div class="services-thumb">
                         <!--<img src="<?= base_url() ?>frontend/images/service-1.jpg" alt="Construction of houses">-->
-                        <img src="<?= base_url() ?>frontend/images/galeria/general/img40.jpg"
+                        <img src="<?= base_url() ?>frontend/images/galeria/general/img40.JPG"
                             alt="Construction of houses">
                     </div>
                     <div class="services-body">
