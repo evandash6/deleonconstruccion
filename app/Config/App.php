@@ -6,14 +6,8 @@ use CodeIgniter\Config\BaseConfig;
 
 class App extends BaseConfig
 {
+    public string $baseURL = 'http://localhost:8080/';
 
-    public $baseURL;
-
-    public function __construct() {
-        $this->baseURL = ($_SERVER['SERVER_NAME'] == 'deleonconstruccion.lamat.pro' || $_SERVER['SERVER_NAME'] == 'deleon')
-            ? BASE . '/public'
-            : 'http://10.57.0.40:8080/deleonconstruccion/public/';
-    }
     /**
      * --------------------------------------------------------------------------
      * Base Site URL
@@ -24,7 +18,7 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    
+
     // public $baseURL = BASE.'/public';
 
     /**

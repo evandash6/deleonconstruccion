@@ -153,11 +153,14 @@ class Home extends BaseController
         echo json_encode($arr);
     }
 
+
+
     /**
      * Funsión para buscar a las personas con diferentes oficio
      */
     public function buscarDirectorio()
     {
+
 
         $arr = [];
 
@@ -239,7 +242,7 @@ class Home extends BaseController
                 foreach ($res as $rows) {
                     $table .= "<tr>
                      <td>
-                        <button onClick='detalle($rows->id_directorio)'class='def-btn btn-detalle form-button' title='Ver detalle de la empresa'><i class='fa fa-eye'></i></button>
+                        <button onClick='detalle($rows->id_directorio)'  class='def-btn btn-detalle form-button' title='Ver detalle de la empresa'><i class='fa fa-eye'></i></button>
                         </td>
                         <td>" . $rows->nom_ent . "</td>
                         <td>" . $rows->nom_mun . "</td>
@@ -263,6 +266,8 @@ class Home extends BaseController
 
         echo  json_encode($arr);
     }
+
+
 
     //Funsión para los detalles del servicio seleccionado
     public function detalleServicio($id = 0)
