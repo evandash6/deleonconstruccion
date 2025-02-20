@@ -20,3 +20,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/', 'Home::consulta');
 $routes->post('/', 'Email::index');
+
+$routes->get('paypal/pay', 'PaypalController::createPayment');
+$routes->get('paypal/success', 'PaypalController::success');
+$routes->get('paypal/cancel', 'PaypalController::cancel');

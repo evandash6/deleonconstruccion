@@ -407,6 +407,7 @@ function iniciaDirectorio(){
  */
 function detalle(val){
 
+//alert(val)
     let url = "<?=base_url()?>home/detalleServicio/"+val;
 
     //Trabajamos mediante ajax para las consultas.
@@ -425,9 +426,25 @@ function detalle(val){
                     //Obtenemos la información
                     if(res.estatus==200){
 
-                        console.log(res.respuesta[0].nombre_empresa)
+                       //Si existe información abrimos el modal y pasamos los datos de la ficha tecnica del detalle de cada oficio:
+                            
+                        if ($('#exampleModal').length) {
 
-                        Swal.fire({
+                            //Abrimos el modal
+                            $('#exampleModal').modal('show');
+                            //Pasamos los datos para mostrar la información dentro del modal
+                            $('#estado').html(res.respuesta[0].nom_ent);
+                            $('#municipio').html(res.respuesta[0].nom_mun)
+
+
+                            }else{
+
+                                alert('Error!! No se puede abrir el Modal o no se encuentra, intente más tarde');
+                            }
+
+                        //console.log(res.respuesta[0].nombre_empresa)
+
+                        /*Swal.fire({
                             title: 'Directorio - Detalle',
                             html: '<center><table border="0">'+
                                     '<tr>'+
@@ -486,7 +503,7 @@ function detalle(val){
                                   width: '50%',
                             type: 'success',
                             //timer: 3000,
-                        });
+                        });*/
 
                     }else{
 
@@ -502,15 +519,6 @@ function detalle(val){
 
             }); //Fin del ajax
 
-    /*Swal.fire({
-        title: 'Título',
-        text: 'Mensaje de texto',
-        html: '<p>Mensaje de texto con <strong>formato</strong>.</p>',
-        type: 'success',
-        timer: 3000,
-    });
-    
-    console.log(val)*/
 }
 
 //Funsión para las guardas las solicitudes de llamadas
