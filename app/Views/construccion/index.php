@@ -7,10 +7,10 @@
 
     <link rel="icon" href="<?= base_url() ?>frontend/images/favicon.png">
 
-    	<!-- CSS de Bootstrap 5 -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-	
-    <!-- JS de Bootstrap 5 --> 
+    <!-- CSS de Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- JS de Bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- DataTables JS -->
@@ -78,22 +78,22 @@
 </head>
 
 <body>
-   
-<!-- Modal para los dedatlles del oficio-->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <div class="modal-form-logo">
-                <!--<img src="<?= base_url() ?>frontend/images/logo-header.svg" alt="Construction">-->
-                <img src="<?= base_url() ?>frontend/images/deleon-construccion.png" alt="Construction">
-            </div>
-			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-		  <div class="modal-form-title">Detalle del directorio</div>
-            <!--Crear aqui los div responsives para la salida de la información-->
-			        <div><strong>Estado: </strong><label id="estado"></label></div>
+
+    <!-- Modal para los dedatlles del oficio-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-form-logo">
+                        <!--<img src="<?= base_url() ?>frontend/images/logo-header.svg" alt="Construction">-->
+                        <img src="<?= base_url() ?>frontend/images/deleon-construccion.png" alt="Construction">
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-form-title">Detalle del directorio</div>
+                    <!--Crear aqui los div responsives para la salida de la información-->
+                    <div><strong>Estado: </strong><label id="estado"></label></div>
                     <div><strong>Municipio: </strong><label id="municipio"></label></div>
                     <div><strong>Oficio: </strong><label id="oficio"></label></div>
                     <div><strong>Empresa: </strong><label id="empresa"></label></div>
@@ -102,15 +102,35 @@
                     <div><strong>Correo: </strong><label id="correo"></label></div>
                     <div><strong>Dirección: </strong><label id="direccion"></label></div>
                     <div><strong>Descripción de la empresa: </strong><label id="descripcion"></label></div>
+                    <br>
+                    <div><strong>Galería fotográfica: </strong> </div>
 
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <!--<button type="button" class="btn btn-primary">Guardar</button>-->
-          </div>
+                    <div class="galeria">
+                        <!--   control  del slider -->
+                        <input type="radio" name="radio-btn" id="imagen1" checked>
+                        <input type="radio" name="radio-btn" id="imagen2">
+
+                        <!-- Imágenes del slider -->
+                        <div class="imagen">
+                            <img id="img1" src="">
+                            <img id="img2" src="">
+                        </div>
+
+                        <!-- Indicadores -->
+                        <div class="navegacion">
+                            <label for="imagen1"></label>
+                            <label for="imagen2"></label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+                </div>
+            </div>
         </div>
-      </div>
-</div>
+    </div>
 
 
     <!--/**
@@ -176,8 +196,8 @@ Modal de directorio de registro
                 <input type="file" name="foto1" value="" accept="image/*" required />
                 <label>imagen 2:</label>
                 <input type="file" name="foto2" value="" accept="image/*" required />
-                <label>Descripción de la empresa:</label>                
-               <textarea  cols="48" name="descripcion_empresa" rows="5"></textarea>
+                <label>Descripción de la empresa:</label>
+                <textarea cols="48" name="descripcion_empresa" rows="5"></textarea>
                 <button id="btn-directorio" class="form-button">Enviar</button>
             </form>
         </div>

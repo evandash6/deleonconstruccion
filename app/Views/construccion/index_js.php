@@ -413,6 +413,9 @@ function showModal(datos) {
 
     //console.log(datos)
 
+    // almacenamos la ruta de las imagenes
+    $ruta = "<?=base_url()?>uploads/imgs/";
+
     if ($('#exampleModal').length) {
 
         //Abrimos el modal
@@ -428,26 +431,31 @@ function showModal(datos) {
         $('#direccion').html($datos.direccion);
         $('#descripcion').html($datos.descripcion_empresa);
 
-    }else{
+        //concatenamos la ruta + la imagen almacenada
+        document.getElementById("img1").src = $ruta + $datos.foto1;
+        document.getElementById("img2").src = $ruta + $datos.foto2;
 
-            alert('Error!! No se puede abrir el Modal o no se encuentra, intente más tarde');
-        }
-/*
-    document.getElementById("miModal").style.display = "block";
 
-    document.getElementById("btnCerrarModal").addEventListener("click", function() {
-        document.getElementById("miModal").style.display = "none";
-    });
+    } else {
 
-    $('#estado').html($datos.nom_ent);
-    $('#municipio').html($datos.nom_mun);
-    $('#oficio').html($datos.oficio);
-    $('#empresa').html($datos.nombre_empresa);
-    $('#responsable').html($datos.nombre);
-    $('#telefono').html($datos.telefono);
-    $('#correo').html($datos.correo);
-    $('#direccion').html($datos.direccion);
-    $('#descripcion').html($datos.descripcion_empresa);*/
+        alert('Error!! No se puede abrir el Modal o no se encuentra, intente más tarde');
+    }
+    /*
+        document.getElementById("miModal").style.display = "block";
+
+        document.getElementById("btnCerrarModal").addEventListener("click", function() {
+            document.getElementById("miModal").style.display = "none";
+        });
+
+        $('#estado').html($datos.nom_ent);
+        $('#municipio').html($datos.nom_mun);
+        $('#oficio').html($datos.oficio);
+        $('#empresa').html($datos.nombre_empresa);
+        $('#responsable').html($datos.nombre);
+        $('#telefono').html($datos.telefono);
+        $('#correo').html($datos.correo);
+        $('#direccion').html($datos.direccion);
+        $('#descripcion').html($datos.descripcion_empresa);*/
 
 }
 

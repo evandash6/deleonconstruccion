@@ -2188,4 +2188,65 @@ textarea {
 /* Responsive END */
 
  
- 
+ /* Contenedor del slider */
+ .galeria {
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Imágenes del slider */
+.imagen {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.imagen img {
+  width: 100%;
+  
+  object-fit: cover;
+}
+
+/* Inputs para controlar el slider */
+input[type="radio"] {
+  display: none;
+}
+
+/* Navegación del slider */
+.navegacion {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.navegacion label {
+  width: 15px;
+  height: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Cambio de imagen con los radio buttons */
+#imagen1:checked ~ .imagen {
+  transform: translateX(0);
+}
+#imagen2:checked ~ .imagen {
+  transform: translateX(-100%);
+}
+
+
+/* Cambiar color del indicador activo */
+#imagen1:checked ~ .navegacion label[for="imagen1"],
+#imagen2:checked ~ .navegacion label[for="imagen2"]
+ {
+  background-color: #333;
+}
