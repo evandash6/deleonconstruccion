@@ -91,7 +91,7 @@
 			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-		  <div class="modal-form-title">Detale del directorio</div>
+		  <div class="modal-form-title">Detalle del directorio</div>
             <!--Crear aqui los div responsives para la salida de la información-->
 			        <div><strong>Estado: </strong><label id="estado"></label></div>
                     <div><strong>Municipio: </strong><label id="municipio"></label></div>
@@ -176,8 +176,8 @@ Modal de directorio de registro
                 <input type="file" name="foto1" value="" accept="image/*" required />
                 <label>imagen 2:</label>
                 <input type="file" name="foto2" value="" accept="image/*" required />
-                <label>Descripción de la empresa:</label>
-                <textarea cols="48" name="descripcion_empresa" rows="5"></textarea>
+                <label>Descripción de la empresa:</label>                
+               <textarea  cols="48" name="descripcion_empresa" rows="5"></textarea>
                 <button id="btn-directorio" class="form-button">Enviar</button>
             </form>
         </div>
