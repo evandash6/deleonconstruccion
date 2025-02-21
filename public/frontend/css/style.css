@@ -2135,6 +2135,48 @@ textarea::placeholder {
   }
 }
 
+@media (max-width: 442px) {
+
+
+  select#id_estado,
+  select#c_municipio,
+  select#c_oficio,
+  input,
+  textarea {
+    width: 340px;
+    margin: 0 auto;
+  }
+
+
+}
+@media (max-width: 396px) {
+
+
+  select#id_estado,
+  select#c_municipio,
+  select#c_oficio,
+  input,
+  textarea {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+
+}
+@media (max-width: 350px) {
+
+
+  select#id_estado,
+  select#c_municipio,
+  select#c_oficio,
+  input,
+  textarea {
+    width: 270px;
+    margin: 0 auto;
+  }
+
+
+}
 /* Responsive END */
 
  
@@ -2172,7 +2214,7 @@ textarea::placeholder {
   float: right;
   margin-top: -45px;
 }
- */
+ 
 @media (max-width: 768px) {
   .modal-contenido {
     width: 80%;
@@ -2188,32 +2230,4 @@ textarea::placeholder {
 
 
 }
-
-@media (max-width: 442px) {
-
-
-  select#id_estado,
-  select#c_municipio,
-  select#c_oficio,
-  input,
-  textarea {
-    width: 340px;
-    margin: 0 auto;
-  }
-
-
-}
-@media (max-width: 396px) {
-
-
-  select#id_estado,
-  select#c_municipio,
-  select#c_oficio,
-  input,
-  textarea {
-    width: 300px;
-    margin: 0 auto;
-  }
-
-
-}
+*/
