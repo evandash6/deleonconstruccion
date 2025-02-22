@@ -105,31 +105,40 @@
                     <br>
                     <div><strong>Galería fotográfica: </strong> </div>
 
-                    <div class="galeria">
-                        <!--   control  del slider -->
-                        <input type="radio" name="radio-btn" id="imagen1" checked>
-                        <input type="radio" name="radio-btn" id="imagen2">
+                    <br>
 
-                        <!-- Imágenes del slider -->
-                        <div class="imagen">
-                            <img id="img1" src="">
-                            <img id="img2" src="">
+                    <!-- Slider -->
+                    <!--   control  del slider -->
+
+
+                    <div class="slider">
+                        <input type="radio" id="slide1" name="slider" checked>
+                        <input type="radio" id="slide2" name="slider">
+
+                        <div class="slides">
+                            <div class="slide"> <img id="img1" src=""></div>
+                            <div class="slide"> <img id="img2" src=""></div>
                         </div>
+                        <div class="navigation">
+                            <label for="slide1"></label>
+                            <label for="slide2"></label>
 
-                        <!-- Indicadores -->
-                        <div class="navegacion">
-                            <label for="imagen1"></label>
-                            <label for="imagen2"></label>
                         </div>
                     </div>
 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+
 
                 </div>
+
             </div>
+            <!--       <div class="modal-footer">
+                  <button type="button" class="btn def-btn form-button"
+                    data-bs-dismiss="modal">Cerrar</button>  
+
+            </div> -->
         </div>
+    </div>
     </div>
 
 

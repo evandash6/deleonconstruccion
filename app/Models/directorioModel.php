@@ -32,6 +32,14 @@ class directorioModel extends Model
         'nombre'  => 'required|min_length[3]|max_length[50]',
         'telefono'=> 'required|min_length[10]|max_length[15]'
     ];
+
+    public function vaciarTabla()
+    {
+         
+        //vacia y reinicia los id
+         return self::truncate();
+        
+    }
 }
 
 

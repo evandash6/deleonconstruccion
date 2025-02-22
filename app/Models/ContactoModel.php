@@ -18,6 +18,15 @@ class ContactoModel extends Model
         'correo'   => 'required|valid_email',
         'telefono'=> 'required|min_length[10]|max_length[15]'
     ];
+
+    public function vaciarTabla()
+    {
+         
+        //vacia y reinicia los id
+         return self::truncate();
+        
+    }
+    
 }
 
 

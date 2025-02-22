@@ -413,6 +413,9 @@ function showModal(datos) {
 
     //console.log(datos)
 
+
+ 
+
     // almacenamos la ruta de las imagenes
     $ruta = "<?=base_url()?>uploads/imgs/";
 

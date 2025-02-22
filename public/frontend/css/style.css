@@ -12,7 +12,7 @@ body {
 }
 
 body {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 16px;
   line-height: 1.6;
   min-width: 320px;
@@ -196,7 +196,7 @@ a {
 input,
 textarea {
   background-color: #f6f6f6;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 input::placeholder,
@@ -213,7 +213,7 @@ textarea::placeholder {
 }
 
 .def-title::before {
-  content: '';
+  content: "";
   height: 1px;
   width: 100%;
   position: absolute;
@@ -233,7 +233,7 @@ textarea::placeholder {
 }
 
 .center-title::after {
-  content: '';
+  content: "";
   height: 1px;
   width: 70px;
   background-color: #d62e4c;
@@ -441,7 +441,7 @@ textarea::placeholder {
 }
 
 .banner-swiper .swiper-slide::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: 0;
@@ -500,7 +500,7 @@ textarea::placeholder {
 }
 
 .swiper-button-next::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 100%;
@@ -514,7 +514,7 @@ textarea::placeholder {
 }
 
 .swiper-button-prev::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 100%;
@@ -527,7 +527,7 @@ textarea::placeholder {
   z-index: -1;
 }
 
-.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
@@ -546,8 +546,9 @@ textarea::placeholder {
   background-color: #d62e4c;
 }
 
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
   margin: 10px;
 }
 
@@ -702,7 +703,7 @@ textarea::placeholder {
 }
 
 .modal-form-title::after {
-  content: '';
+  content: "";
   display: block;
   height: 1px;
   width: 70px;
@@ -714,7 +715,7 @@ textarea::placeholder {
   display: block;
   padding: 22px 25px;
   background-color: #f6f6f6;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 16px;
   border: none;
   width: 100%;
@@ -732,7 +733,7 @@ textarea::placeholder {
   padding: 20px 25px;
   border: none;
   cursor: pointer;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 16px;
   transition: background-color 0.35s ease;
 }
@@ -1026,7 +1027,7 @@ textarea::placeholder {
 }
 
 .gallery-wrap a::before {
-  content: 'Zoom';
+  content: "Zoom";
   background-color: rgba(68, 62, 62, 0.72);
   position: absolute;
   width: 100%;
@@ -1043,8 +1044,8 @@ textarea::placeholder {
 }
 
 .gallery-wrap a::after {
-  content: '';
-  background-image: url('../images/magnify.svg');
+  content: "";
+  background-image: url("../images/magnify.svg");
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1304,7 +1305,7 @@ textarea::placeholder {
 }
 
 .form-right form::before {
-  content: '';
+  content: "";
   width: 100%;
   height: 10px;
   background-color: #8e2e2e;
@@ -1317,7 +1318,7 @@ textarea::placeholder {
 .form-right form input,
 .form-right form textarea {
   font-size: 14px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   display: block;
   width: 100%;
   padding: 22px 30px;
@@ -1440,7 +1441,6 @@ textarea {
 
 /* Responsive START */
 @media screen and (max-width: 1200px) {
-
   /* Header 1200 START */
   .header-logo {
     padding: 15px 50px 15px 20px;
@@ -1472,7 +1472,6 @@ textarea {
 }
 
 @media screen and (max-width: 992px) {
-
   /* Header 992 START */
   .header-logo {
     padding: 10px 30px 10px 20px;
@@ -1747,7 +1746,8 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
-  .header-mobile-nav,.header-mobile-info{
+  .header-mobile-nav,
+  .header-mobile-info {
     display: none;
   }
 
@@ -1759,7 +1759,6 @@ textarea {
 }
 
 @media screen and (max-width: 768px) {
-
   /* All styles 768 START */
   .def-title {
     font-size: 32px;
@@ -1838,7 +1837,8 @@ textarea {
     bottom: 0;
   }
 
-  .hamburger.is-active {}
+  .hamburger.is-active {
+  }
 
   .hamburger.is-active span:first-child {
     top: 50%;
@@ -2002,7 +2002,6 @@ textarea {
 }
 
 @media screen and (max-width: 575px) {
-
   /* All styles START */
   .def-title {
     text-align: center;
@@ -2013,7 +2012,7 @@ textarea {
   }
 
   .def-title::after {
-    content: '';
+    content: "";
     height: 1px;
     width: 50px;
     background-color: #d62e4c;
@@ -2142,8 +2141,6 @@ textarea {
 }
 
 @media (max-width: 442px) {
-
-
   select#id_estado,
   select#c_municipio,
   select#c_oficio,
@@ -2152,12 +2149,8 @@ textarea {
     width: 340px;
     margin: 0 auto;
   }
-
-
 }
 @media (max-width: 396px) {
-
-
   select#id_estado,
   select#c_municipio,
   select#c_oficio,
@@ -2166,12 +2159,8 @@ textarea {
     width: 300px;
     margin: 0 auto;
   }
-
-
 }
 @media (max-width: 350px) {
-
-
   select#id_estado,
   select#c_municipio,
   select#c_oficio,
@@ -2180,73 +2169,74 @@ textarea {
     width: 270px;
     margin: 0 auto;
   }
-
-
 }
 
- 
 /* Responsive END */
 
- 
- /* Contenedor del slider */
- .galeria {
-  width: 100%;
-  max-width: 600px;
-  overflow: hidden;
+/* Slider */
+.slider {
   position: relative;
-  margin: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
 }
 
-/* Imágenes del slider */
-.imagen {
+.slides {
   display: flex;
-  width: 100%;
+  width: 300%;
   transition: transform 0.5s ease-in-out;
 }
 
-.imagen img {
+.slide {
   width: 100%;
-  
-  object-fit: cover;
+  flex-shrink: 0;
 }
 
-/* Inputs para controlar el slider */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Ocultar los radio buttons */
 input[type="radio"] {
   display: none;
 }
 
-/* Navegación del slider */
-.navegacion {
+/* Navegación con los radio buttons */
+.navigation {
   display: flex;
   justify-content: center;
   margin-top: 10px;
 }
 
-.navegacion label {
-  width: 15px;
-  height: 15px;
-  background-color: #bbb;
+.navigation label {
+  width: 10px;
+  height: 10px;
+  background: gray;
   border-radius: 50%;
-  display: inline-block;
   margin: 5px;
   cursor: pointer;
   transition: background 0.3s;
 }
 
-/* Cambio de imagen con los radio buttons */
-#imagen1:checked ~ .imagen {
+/* Cambiar el fondo cuando está seleccionado */
+#slide1:checked ~ .slides {
   transform: translateX(0);
 }
-#imagen2:checked ~ .imagen {
+
+#slide2:checked ~ .slides {
   transform: translateX(-100%);
 }
 
+#slide3:checked ~ .slides {
+  transform: translateX(-200%);
+}
 
-/* Cambiar color del indicador activo */
-#imagen1:checked ~ .navegacion label[for="imagen1"],
-#imagen2:checked ~ .navegacion label[for="imagen2"]
- {
-  background-color: #333;
+/* Cambiar color de los puntos al seleccionarlos */
+#slide1:checked ~ .navigation label:nth-child(1),
+#slide2:checked ~ .navigation label:nth-child(2),
+#slide3:checked ~ .navigation label:nth-child(3) {
+  background: black;
 }

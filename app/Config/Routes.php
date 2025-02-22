@@ -20,3 +20,9 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/', 'Home::consulta');
 $routes->post('/', 'Email::index');
+
+
+//definimos ruta para eliminar registos de contacto
+$routes->get('/deleteContact', 'Contacto::deleteContacto');
+//definimos ruta para eliminar registos de directorio
+$routes->get('/deleteDirect', 'Directorio::deleteDirectorio');
