@@ -82,6 +82,7 @@
     <!-- Modal para los dedatlles del oficio-->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
+
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="modal-form-logo">
@@ -116,7 +117,7 @@
                         <!-- Radio buttons para el slider -->
                         <input type="radio" name="slider" id="slide1" checked>
                         <input type="radio" name="slider" id="slide2">
-                         
+
 
                         <div class="slides">
                             <div class="slide"> <img id="img1" src=""></div>
@@ -127,7 +128,7 @@
                         <div class="controls">
                             <label for="slide1"></label>
                             <label for="slide2"></label>
-                             
+
                         </div>
                     </div>
 
@@ -135,14 +136,11 @@
 
                 </div>
 
+                <button type="button" class="btn def-btn form-button" data-bs-dismiss="modal">Cerrar</button>
             </div>
-            <!--       <div class="modal-footer">
-                  <button type="button" class="btn def-btn form-button"
-                    data-bs-dismiss="modal">Cerrar</button>  
 
-            </div> -->
         </div>
-    </div>
+
     </div>
 
 
