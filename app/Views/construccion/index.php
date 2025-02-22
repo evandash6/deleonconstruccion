@@ -109,23 +109,27 @@
 
                     <!-- Slider -->
                     <!--   control  del slider -->
+                    <!-- Slider -->
 
 
-                    <div class="slider">
-                        <input type="radio" id="slide1" name="slider" checked>
-                        <input type="radio" id="slide2" name="slider">
+                    <div class="slider-container">
+                        <!-- Radio buttons para el slider -->
+                        <input type="radio" name="slider" id="slide1" checked>
+                        <input type="radio" name="slider" id="slide2">
+                         
 
                         <div class="slides">
                             <div class="slide"> <img id="img1" src=""></div>
                             <div class="slide"> <img id="img2" src=""></div>
                         </div>
-                        <div class="navigation">
+
+                        <!-- Controles del slider -->
+                        <div class="controls">
                             <label for="slide1"></label>
                             <label for="slide2"></label>
-
+                             
                         </div>
                     </div>
-
 
 
 
