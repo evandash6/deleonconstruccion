@@ -51,8 +51,11 @@ class Home extends BaseController
     }
 
     //Guardar directorio
-    public function guardaDirectorio()
-    {
+    public function guardaDirectorio(){
+
+        //Colocar para el envio de correos
+        $email = \Config\Services::email();
+
         // Crear una instancia del modelo
         $directorioModel = new directorioModel();
 
@@ -80,15 +83,16 @@ class Home extends BaseController
 
             //Validamos los ciertos errores al guardar la imagen.
             //Imagen 1
-            if (!in_array($foto1->getMimeType(), ['image/jpeg', 'image/png', 'image/jpg'])) {
+            if (!in_array($foto1->getMimeType(), ['image/jpeg', 'image/png', 'image/jpg', 'image/jpg','image/webp'])) {
 
-                $arr = ['estatus' => 500, 'respuesta' => 'Formato de la imagen 1 no es permitido. Solo JPEG, PNG o JPG.'];
+                $arr = ['estatus' => 500, 'error' => 'Formato de la imagen 1 no es permitido. Solo JPEG, PNG o JPG.'];
 
                 //return "Formato no permitido. Solo JPEG, PNG o JPG.";
                 //Imagen 2
-            } else if (!in_array($foto2->getMimeType(), ['image/jpeg', 'image/png', 'image/jpg'])) {
+            } else if (!in_array($foto2->getMimeType(), ['image/jpeg', 'image/png', 'image/jpg','image/webp'])) {
 
-                $arr = ['estatus' => 500, 'respuesta' => 'Formato de la imagen 2 no es permitido. Solo JPEG, PNG o JPG.'];
+                $arr = ['estatus' => 500, 'error' => 'Formato de la imagen 2 no es permitido. Solo JPEG, PNG o JPG.'];
+
             } else {
 
                 //Si los formatos de las imagenes son correctas, procedemos a guardar las imagenes en la carpeta correspondiente.
@@ -130,9 +134,39 @@ class Home extends BaseController
                     // Insertar los datos en la base de datos
                     if ($directorioModel->save($data)) {
 
-                        $arr = ['estatus' => 200, 'respuesta' => 'La información proporcionada fue guardada correctamente dentro de nuestro directorio'];
+                       //Espacio para el envio de correo electronico al usuario y a los involuicrados
+                        $email->setTo('atencion.deleonconstruccion@gmail.com,acilegna.airam88@gmail.com');
+                        $email->setFrom($correo, $nombre);
+                        $email->setSubject('Nuevo registro - Directorio');
 
-                        //Espacio para el envio de correo electronico al usuario y a los involuicrados
+                        //Colocar las plantillas del envio de correos.
+                        $email->setMessage('<h1>¡Hola!</h1>
+                        <p>Nuevo registro realiazado - Directorio</p>
+                        <p><strong>Detalle del nuevo registro<strong></p>
+                        <p><strong>Estado:</strong> </p>
+                        <p><strong>Municipio:</strong> </p>
+                        <p><strong>Oficio:</strong> </p>
+                        <p><strong>Nombre empresa:</strong> '.$nombre_empresa.'</p>
+                        <p><strong>Nombre:</strong> '.$nombre.'</p>
+                        <p><strong>Teléfono:</strong> '.$telefono.'</p>
+                        <p><strong>correo:</strong> '.$correo.'</p>
+                        <p><strong>Dirección:</strong> '.$direccion.'</p>
+                        <p><strong>Imagen 1:</strong> </p>
+                        <p><strong>Imagen 1:</strong> </p>
+                        <p><strong>Descripción de la empresa:</strong> '.$descripcion_empresa.'</p>');
+
+                        if ($email->send()) {
+
+                            //return 'Correo enviado correctamente';
+                            $arr = ['estatus' => 200, 'respuesta' => 'La información proporcionada fue guardada correctamente dentro de nuestro directorio'];
+
+                            //$arr = ['estatus'=>200];
+
+                        } else {
+
+                            //return $email->printDebugger(['headers']);
+                            $arr = ['estatus'=>500];
+                        }
 
                     } else {
 
@@ -153,11 +187,14 @@ class Home extends BaseController
         echo json_encode($arr);
     }
 
+
+
     /**
      * Funsión para buscar a las personas con diferentes oficio
      */
     public function buscarDirectorio()
     {
+
 
         $arr = [];
 
@@ -239,7 +276,7 @@ class Home extends BaseController
                 foreach ($res as $rows) {
                     $table .= "<tr>
                      <td>
-                        <button onClick='detalle($rows->id_directorio)'class='def-btn btn-detalle form-button' title='Ver detalle de la empresa'><i class='fa fa-eye'></i></button>
+                        <button onClick='detalle($rows->id_directorio)'  class='def-btn btn-detalle form-button' title='Ver detalle de la empresa'><i class='fa fa-eye'></i></button>
                         </td>
                         <td>" . $rows->nom_ent . "</td>
                         <td>" . $rows->nom_mun . "</td>
@@ -263,6 +300,8 @@ class Home extends BaseController
 
         echo  json_encode($arr);
     }
+
+
 
     //Funsión para los detalles del servicio seleccionado
     public function detalleServicio($id = 0)

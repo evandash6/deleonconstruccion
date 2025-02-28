@@ -33,17 +33,17 @@ class Email extends BaseConfig
     /**
      * SMTP Username
      */
-    public string $SMTPUser = 'sergio.soluciones9@gmail.com';
+    public string $SMTPUser = 'atencion.deleonconstruccion@gmail.com';
 
     /**
      * SMTP Password
      */
-    public string $SMTPPass = 'sergio_antonio';//Configuración de aplicaciones, dara la contraseña de Gmail
+    public string $SMTPPass = 'gqdq izgs hbbn rmqo';//Configuración de aplicaciones, dara la contraseña de Gmail
 
     /**
      * SMTP Port
      */
-    public int $SMTPPort = 2525; //25
+    public int $SMTPPort = 465; //25
 
     /**
      * SMTP Timeout (in seconds)

@@ -19,6 +19,9 @@ class Email extends Controller{
 
     public function contacto(){
 
+        //Colocar para el envio de correos
+        $email = \Config\Services::email();
+
         $arr = [];
 
         if($this->request->getMethod()=="post"){
@@ -35,7 +38,7 @@ class Email extends Controller{
             // Datos que se van a insertar
             $data = [
                 'nombre'  => $nombre,
-                'telefono'   => $telefono,
+                'telefono' => $telefono,
                 'correo'=> $correo,
                 'comentarios'=>$comentarios,
                 'atendido'=>0,
@@ -45,9 +48,30 @@ class Email extends Controller{
              // Insertar los datos en la base de datos
             if ($ContactoModel->save($data)) {
 
-                $arr = ['estatus'=>200];
-
+                //$arr=['estatus'=>200,'data'=>$data];
+                //Vsita con la información del envio!!
+                $vista = view('construccion/email_contacto', $data);
                 //Espacio para el envio de correo electronico al usuario y a los involuicrados
+                $email->setTo('atencion.deleonconstruccion@gmail.com, acilegna.airam88@gmail.com');
+                $email->setFrom($correo, $nombre);
+                $email->setSubject('Notificacion de contactos');
+
+                //Colocar las plantillas del envio de correos.
+                //$email->setMessage('<h1>¡Hola!</h1><p>Nuevo registro de contacto</p><p>La persona: '.$nombre.' con correo: '.$correo.' y teléfono: '.$telefono.' coloco el siguiente comentario:</p><p>'.$comentarios.'</p>');
+
+                //Enviamos el formulari
+                $email->setMessage($vista);
+                if ($email->send()) {
+
+                    //return 'Correo enviado correctamente';
+
+                    $arr = ['estatus'=>200];
+
+                } else {
+
+                    //return $email->printDebugger(['headers']);
+                    $arr = ['estatus'=>500];
+                }
 
             } else {
 
@@ -119,6 +143,28 @@ class Email extends Controller{
 
         echo  json_encode($arr);
 
-    } 
+    }
+    
+    //Prueba del envio de correos, solo ejemplo
+    public function sendEmail()
+    {
+        $email = \Config\Services::email();
+
+        $email->setTo('sergio.soluciones9@gmail.com, acilegna.airam88@gmail.com');
+        $email->setFrom('atencion.deleonconstruccion@gmail.com', 'De León');
+        $email->setSubject('Prueba de Envío de Correo');
+        $email->setMessage('<h1>¡Hola!</h1><p>Este es un correo de prueba en CodeIgniter 4.</p>');
+
+        if ($email->send()) {
+            return 'Correo enviado correctamente';
+        } else {
+            return $email->printDebugger(['headers']);
+        }
+    }
+
+    public function index(){
+
+        echo view('construccion/email_contacto');
+    }
 
 }
