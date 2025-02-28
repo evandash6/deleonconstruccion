@@ -49,23 +49,40 @@ class Email extends Controller{
             if ($ContactoModel->save($data)) {
 
                 //$arr=['estatus'=>200,'data'=>$data];
-                //Vsita con la información del envio!!
+
+                //Vsita con la información del envio para el usuario!!
                 $vista = view('construccion/email_contacto', $data);
+
                 //Espacio para el envio de correo electronico al usuario y a los involuicrados
-                $email->setTo('atencion.deleonconstruccion@gmail.com, acilegna.airam88@gmail.com');
-                $email->setFrom($correo, $nombre);
+                $email->setTo($correo);
+                $email->setFrom('atencion.deleonconstruccion@gmail.com', 'DE LEON-CONSTRUCCIÓN');
                 $email->setSubject('Notificacion de contactos');
 
-                //Colocar las plantillas del envio de correos.
-                //$email->setMessage('<h1>¡Hola!</h1><p>Nuevo registro de contacto</p><p>La persona: '.$nombre.' con correo: '.$correo.' y teléfono: '.$telefono.' coloco el siguiente comentario:</p><p>'.$comentarios.'</p>');
-
-                //Enviamos el formulari
+               //Enviamos el formulari
                 $email->setMessage($vista);
+
                 if ($email->send()) {
 
-                    //return 'Correo enviado correctamente';
+                    //Si todo es correcto enviamos correo al administrador, para que sepa que llego un correo.
+                    $vista_admin = view('construccion/email_admin', $data);
+
+                    //Espacio para el envio de correo electronico al usuario y a los involuicrados
+                    $email->setTo('atencion.deleonconstruccion@gmail.com');
+                    $email->setFrom('atencion.deleonconstruccion@gmail.com', 'DE LEON-CONSTRUCCIÓN');
+                    $email->setSubject('Administración de notificacion de contactos');
+    
+                   //Enviamos el formulari
+                    $email->setMessage($vista_admin);
+
+                    if ($email->send()) {
 
                     $arr = ['estatus'=>200];
+
+                    }else{
+
+                        $arr = ['estatus'=>500];
+
+                    }
 
                 } else {
 
@@ -78,7 +95,6 @@ class Email extends Controller{
                 $arr = ['estatus'=>500];
 
                 //Espacio para la notificación del correo de error al guardar.
-
             }
 
             

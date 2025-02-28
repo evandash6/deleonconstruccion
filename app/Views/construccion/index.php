@@ -1158,6 +1158,9 @@ Modal de directorio de registro
 
                 <div class="form-right">
                     <form id="formcontacto" name="formcontacto">
+                    <div class="def-desc">
+                        <strong>Cotiza con nosotros, sin compromisos. </strong>
+                    </div>
                         <input type="text" name="nombre" id="nombre" placeholder="Tú nombre*" required>
                         <input type="text" name="telefono" placeholder="Tú teléfono*" required>
                         <input type="email" name="correo" placeholder="Tú correo*" required>

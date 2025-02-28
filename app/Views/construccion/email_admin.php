@@ -14,9 +14,10 @@
                  <!-- Contenido -->
                  <tr>
                      <td style="padding: 20px; text-align: left; font-size: 16px; color: #333;">
-                         <p><strong style="text-transform: capitalize;">DE LEÓN-CONSTRUCCIÓN</strong> Agradece su preferencia.</p>
-                         <p>Estimado <strong><?php echo $nombre?></strong> recibimos su información y comentarios correctamente, nos pondremos en contacto con usted a la brevedad posible.</p>
-                         <ul>
+                         <p><strong style="text-transform: capitalize;">FORMULARIO DE CONTACTO</strong></p>
+                         <p>Estimado administrador hay un nuevo registro. A continuación proporcionamos los detalles:
+                         </p>
+                        <ul>
                              <li><strong style="text-transform: capitalize;">Nombre: </strong><?php echo $nombre; ?>
                              </li>
                              <li><strong style="text-transform: capitalize;">Email: </strong><?php echo $correo; ?>
