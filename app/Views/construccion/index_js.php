@@ -22,13 +22,12 @@ $(document).ready(function() {
     //Iniciamos el directorio
     iniciaDirectorio();
 
+
+
     //Evento de envio del formulario de correo de contactos
     $('#enviar').on('click', function(e) {
 
         e.preventDefault();
-
-        //Desactivamos el boton de enviar
-        $('#enviar').prop("disabled", true);
 
 
         let forms = $('#formcontacto');
@@ -57,30 +56,23 @@ $(document).ready(function() {
                     //console.log(res.estatus)
 
                     if (res.estatus == 200) {
-                        
+
                         //Notificamos al usuario que sus datos fueron guardados correctamente 
                         //Swal.fire("Contacto guardado correctamente, se pondran en contacto al correo o teléfono guardado.");
                         Swal.fire({
                             //type: "",
                             title: "DE LEÓN-CONSTRUCCIÓN agradece su preferencia",
-                            text: "Contacto guardado correctamente, se pondrán en contacto al correo o teléfono registrados."
+                            text: "Contacto guardado correctamente, se pondrán en contacto al correo o teléfono guardado."
                             //footer: "<a href>Why do I have this issue?</a>"
                         });
                         //Limpiamos el formulario de contacto.
                         $("#formcontacto")[0].reset();
-
-                        //Activamos el boton
-                        $('#enviar').prop("disabled", false);
-                        
 
                     } else {
 
                         Swal.fire("Error al guardar la información, intente más tarde.");
                         $("#formcontacto")[0].reset();
                         //Notificamos al correo el error de guardado de información al Administrador.
-
-                        //Activamos el boton
-                        $('#enviar').prop("disabled", false);
 
                     }
 
@@ -269,9 +261,6 @@ $(document).ready(function() {
 
         e.preventDefault();
 
-        //iniciamos inactivando el boton de enviar a guardar.
-        $('#btn-directorio').prop("disabled", true);
-
         //console.log('Directorio');
         let forms = $('#form-directorio');
 
@@ -307,9 +296,6 @@ $(document).ready(function() {
                         });
                         //Limpiamos el formulario de contacto.
                         $("#form-directorio")[0].reset();
-
-                        //Activamos el boton
-                        $('#btn-directorio').prop("disabled", false);
                     } else {
 
                         Swal.fire({
@@ -321,18 +307,12 @@ $(document).ready(function() {
                         //Limpiamos el formulario de contacto.
                         $("#form-directorio")[0].reset();
 
-                        //Activamos el boton
-                        $('#btn-directorio').prop("disabled", false);
-
                     }
 
                 },
                 error: function() {
                     alert('Error al guardar el directorio, Intente mas tarde.');
                     $("#form-directorio")[0].reset();
-
-                    //Activamos el boton
-                    ('#btn-directorio').prop("disabled", false);
                 }
             });
         }
@@ -432,6 +412,10 @@ $(document).ready(function() {
 function showModal(datos) {
 
     //console.log(datos)
+
+
+ 
+
     // almacenamos la ruta de las imagenes
     $ruta = "<?=base_url()?>uploads/imgs/";
 

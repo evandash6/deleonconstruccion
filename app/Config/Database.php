@@ -38,10 +38,11 @@ class Database extends Config
     public array $tests = [
         'DSN'         => '',
         'hostname'    => '127.0.0.1',
-        'username'    => '',
-        'password'    => '',
-        'database'    => ':memory:',
-        'DBDriver'    => 'SQLite3',
+        'username'    => 'root',
+        'password'    => '12345',
+        'database' => 'deleonconstruccion',
+        'DBDriver' => 'MySQLi', // o 'PDO' si prefieres usar PDO
+
         'DBPrefix'    => 'db_',  // Needed to ensure we're working correctly with prefixes live. DO NOT REMOVE FOR CI DEVS
         'pConnect'    => false,
         'DBDebug'     => true,
@@ -72,15 +73,15 @@ class Database extends Config
             case 'deleonconstruccion.lamat.pro':
                 $user = 'admin_deleon';
                 $pass = 'W2ym02u~6';
-            break;
+                break;
             case 'deleon':
                 $user = 'root';
                 $pass = '2424123abc';
-            break;
+                break;
             default:
                 $user = 'root';
-                $pass = '';
-            break;
+                $pass = '12345';
+                break;
         }
 
 

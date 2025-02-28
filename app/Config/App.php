@@ -9,10 +9,11 @@ class App extends BaseConfig
 
     public $baseURL;
 
+    //en tu pc sera diferente 
     public function __construct() {
         $this->baseURL = ($_SERVER['SERVER_NAME'] == 'deleonconstruccion.lamat.pro' || $_SERVER['SERVER_NAME'] == 'deleon')
             ? BASE . '/public'
-            : 'http://10.57.0.40:8080/deleonconstruccion/public/';
+            : 'http://localhost/deleonconstruccion/public/';
     }
     /**
      * --------------------------------------------------------------------------
