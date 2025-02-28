@@ -80,7 +80,7 @@ class Database extends Config
                 break;
             default:
                 $user = 'root';
-                $pass = '12345';
+                $pass = '';
                 break;
         }
 
